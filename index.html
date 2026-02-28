@@ -37,20 +37,20 @@
       
       <div class="flex items-center gap-4">
         <!-- Language Selector -->
-        <div class="relative group">
-          <button id="lang-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-sm font-medium">
+        <div class="relative">
+          <button id="lang-btn" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-sm font-medium focus:ring-2 focus:ring-blue-500 outline-none">
             <i class="fas fa-globe"></i>
             <span id="current-lang">KO</span>
             <i class="fas fa-chevron-down text-[10px]"></i>
           </button>
-          <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 py-2 hidden group-hover:block animate-in fade-in slide-in-from-top-2">
-            <button onclick="setLanguage('ko')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">한국어 (KO)</button>
-            <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">English (EN)</button>
-            <button onclick="setLanguage('vi')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">Tiếng Việt (VI)</button>
-            <button onclick="setLanguage('hi')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">हिन्दी (HI)</button>
-            <button onclick="setLanguage('de')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">Deutsch (DE)</button>
-            <button onclick="setLanguage('fr')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">Français (FR)</button>
-            <button onclick="setLanguage('es')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm">Español (ES)</button>
+          <div id="lang-menu" class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 py-2 hidden animate-in fade-in slide-in-from-top-2 z-[60]">
+            <button onclick="setLanguage('ko')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">한국어 (KO)</button>
+            <button onclick="setLanguage('en')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">English (EN)</button>
+            <button onclick="setLanguage('vi')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">Tiếng Việt (VI)</button>
+            <button onclick="setLanguage('hi')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">हिन्दी (HI)</button>
+            <button onclick="setLanguage('de')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">Deutsch (DE)</button>
+            <button onclick="setLanguage('fr')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">Français (FR)</button>
+            <button onclick="setLanguage('es')" class="w-full text-left px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm transition-colors">Español (ES)</button>
           </div>
         </div>
 

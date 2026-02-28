@@ -198,6 +198,9 @@ function setLanguage(lang) {
   
   // Re-render preview with new language instructions
   if (typeof updatePreview === 'function') updatePreview();
+
+  // Close menu after selection
+  document.getElementById('lang-menu').classList.add('hidden');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -211,8 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const fileInput = document.getElementById('file-input');
   const dropZone = document.getElementById('drop-zone');
   const uploadPreview = document.getElementById('upload-preview');
+  const langBtn = document.getElementById('lang-btn');
+  const langMenu = document.getElementById('lang-menu');
 
   let currentFile = null;
+
+  // Language Dropdown Logic
+  langBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langMenu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+      langMenu.classList.add('hidden');
+    }
+  });
 
   // Theme Logic
   const savedTheme = localStorage.getItem('theme') || 'light';
