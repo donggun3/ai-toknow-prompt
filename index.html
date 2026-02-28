@@ -244,6 +244,34 @@
       </div>
     </section>
 
+    <!-- Section 5: Community & Comments -->
+    <section class="bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-[0_8px_30px_rgb(0,0,0,0.02)] border border-slate-100 dark:border-slate-800 transition-all">
+      <div class="max-w-3xl mx-auto">
+        <h2 data-i18n="comments-title" class="text-2xl font-bold mb-4 flex items-center justify-center gap-3 text-slate-800 dark:text-slate-100">
+          <i class="fas fa-comments text-blue-600"></i>
+          사용자 의견 및 커뮤니티
+        </h2>
+        <p data-i18n="comments-subtitle" class="text-center text-slate-600 dark:text-slate-400 mb-10 text-sm">
+          분석 도구 사용 후기나 개선 아이디어를 자유롭게 남겨주세요.
+        </p>
+
+        <div id="disqus_thread" class="min-h-[200px]"></div>
+        <script>
+            var disqus_config = function () {
+              this.page.url = window.location.href;  
+              this.page.identifier = window.location.pathname; 
+            };
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://ai-toknow-prompt.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </section>
+
     <!-- Bottom AD Slot -->
     <div class="w-full bg-slate-100 dark:bg-slate-900 py-8 flex justify-center items-center border border-slate-200 dark:border-slate-800 rounded-3xl min-h-[120px]">
       <div class="ad-placeholder text-slate-400 dark:text-slate-600 text-xs font-mono">AD SLOT: BOTTOM (728x90)</div>
