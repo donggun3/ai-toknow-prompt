@@ -21,6 +21,12 @@ const translations = {
     "label-text": "텍스트 로직 (IL, ST 등) 또는 추가 정보",
     "btn-analyze": "Google AI로 즉시 분석하기",
     "preview-title": "전송될 프롬프트 미리보기",
+    "contact-title": "제휴 및 분석 도구 협력 문의",
+    "contact-subtitle": "PLC 분석 솔루션 도입이나 기술 제휴에 관심이 있으시다면 메시지를 남겨주세요.",
+    "form-name": "성함 / 기업명",
+    "form-email": "이메일 주소",
+    "form-message": "문의 내용",
+    "btn-submit": "문의 보내기",
     "footer-copy": "© 2026 Ladder Analyst. Multi-modal Gemini 최적화.",
     "footer-privacy": "개인정보처리방침",
     "footer-contact": "문의하기",
@@ -63,10 +69,15 @@ const translations = {
     "label-text": "Text Logic (IL, ST, etc.) or Additional Info",
     "btn-analyze": "Analyze with Google AI Now",
     "preview-title": "Generated Prompt Preview",
+    "contact-title": "Partnership & Tool Cooperation",
+    "contact-subtitle": "If you are interested in PLC analysis solutions or technical partnerships, please leave a message.",
+    "form-name": "Name / Company",
+    "form-email": "Email Address",
+    "form-message": "Inquiry Content",
+    "btn-submit": "Send Inquiry",
     "footer-copy": "© 2026 Ladder Analyst. Optimized for Multi-modal Gemini.",
     "footer-privacy": "Privacy Policy",
     "footer-contact": "Contact Us",
-    // Prompt translations
     "prompt-goal-header": "### Analysis Goal:",
     "prompt-source-header": "### Data Source Information:",
     "prompt-visual-req": "[Visual Analysis Request]\nThe attached file is visual material (Image/PDF). Please precisely decode the contacts, coils, and connections in the diagram.",
@@ -105,10 +116,15 @@ const translations = {
     "label-text": "Mã văn bản (IL, ST, v.v.) hoặc thông tin thêm",
     "btn-analyze": "Phân tích ngay với Google AI",
     "preview-title": "Xem trước lời nhắc",
+    "contact-title": "Liên hệ hợp tác & Công cụ",
+    "contact-subtitle": "Nếu bạn quan tâm đến giải pháp phân tích PLC hoặc hợp tác kỹ thuật, vui lòng để lại lời nhắn.",
+    "form-name": "Họ tên / Công ty",
+    "form-email": "Địa chỉ Email",
+    "form-message": "Nội dung liên hệ",
+    "btn-submit": "Gửi yêu cầu",
     "footer-copy": "© 2026 Ladder Analyst.",
     "footer-privacy": "Bảo mật",
     "footer-contact": "Liên hệ",
-    // Prompt translations
     "prompt-goal-header": "### Mục đích phân tích:",
     "prompt-source-header": "### Thông tin nguồn dữ liệu:",
     "prompt-visual-req": "[Yêu cầu phân tích trực quan]\nTệp đính kèm là tài liệu trực quan (Hình ảnh/PDF). Vui lòng giải mã chính xác các tiếp điểm, cuộn dây và kết nối trong biểu đồ.",
@@ -147,10 +163,15 @@ const translations = {
     "label-text": "Código de texto (IL, ST, etc.) o info adicional",
     "btn-analyze": "Analizar con Google AI ahora",
     "preview-title": "Vista previa del Prompt",
+    "contact-title": "Asociación y Cooperación",
+    "contact-subtitle": "Si está interesado en soluciones de análisis de PLC o asociaciones técnicas, deje un mensaje.",
+    "form-name": "Nombre / Empresa",
+    "form-email": "Correo electrónico",
+    "form-message": "Contenido de la consulta",
+    "btn-submit": "Enviar consulta",
     "footer-copy": "© 2026 Ladder Analyst.",
     "footer-privacy": "Privacidad",
     "footer-contact": "Contacto",
-    // Prompt translations
     "prompt-goal-header": "### Objetivo del análisis:",
     "prompt-source-header": "### Información de la fuente de datos:",
     "prompt-visual-req": "[Solicitud de análisis visual]\nEl archivo adjunto es material visual (Imagen/PDF). Por favor, decodifique con precisión los contactos, bobinas y conexiones en el diagrama.",
@@ -189,10 +210,15 @@ const translations = {
     "label-text": "Textcode (IL, ST usw.) oder Zusatzinfos",
     "btn-analyze": "Jetzt mit Google AI analysieren",
     "preview-title": "Prompt-Vorschau",
+    "contact-title": "Partnerschaft & Kooperation",
+    "contact-subtitle": "Bei Interesse an SPS-Analyselösungen oder technischen Partnerschaften hinterlassen Sie uns bitte eine Nachricht.",
+    "form-name": "Name / Unternehmen",
+    "form-email": "E-Mail-Adresse",
+    "form-message": "Inhalt der Anfrage",
+    "btn-submit": "Anfrage senden",
     "footer-copy": "© 2026 Ladder Analyst.",
     "footer-privacy": "Datenschutz",
     "footer-contact": "Kontakt",
-    // Prompt translations
     "prompt-goal-header": "### Analyseziel:",
     "prompt-source-header": "### Informationen zur Datenquelle:",
     "prompt-visual-req": "[Anfrage zur visuellen Analyse]\nDie beigefügte Datei ist visuelles Material (Bild/PDF). Bitte dekodieren Sie die Kontakte, Spulen und Verbindungen im Diagramm präzise.",
@@ -231,10 +257,15 @@ const translations = {
     "label-text": "Code texte (IL, ST, etc.) ou info sup",
     "btn-analyze": "Analyser avec Google AI maintenant",
     "preview-title": "Aperçu du Prompt",
+    "contact-title": "Partenariat & Coopération",
+    "contact-subtitle": "Si vous êtes intéressé par des solutions d'analyse PLC ou des partenariats techniques, laissez un message.",
+    "form-name": "Nom / Entreprise",
+    "form-email": "Adresse Email",
+    "form-message": "Contenu de la demande",
+    "btn-submit": "Envoyer la demande",
     "footer-copy": "© 2026 Ladder Analyst.",
     "footer-privacy": "Confidentialité",
     "footer-contact": "Contact",
-    // Prompt translations
     "prompt-goal-header": "### Objectif de l'analyse :",
     "prompt-source-header": "### Informations sur la source de données :",
     "prompt-visual-req": "[Demande d'analyse visuelle]\nLe fichier joint est un support visuel (Image/PDF). Veuillez décoder précisément les contacts, bobines et connexions dans le diagramme.",
@@ -262,7 +293,7 @@ const translations = {
     "tip2-desc": "IL और ST प्रारूप सटीक विश्लेषण प्रदान करते हैं। Rockwell .L5X फाइलें समर्थित हैं।",
     "warning-title": "बाइनरी फ़ाइल सीमाएं",
     "warning-desc": ".gxw या .ap15 जैसी बाइनरी फाइलें सीधे पढ़ना कठिन है। कृपया स्क्रीनशॉट या PDF का उपयोग करें।",
-    "form-title": "इमेज / PDF / डेटा अपलोड",
+    "form-title": "इमेज / PDF / 데이터 अपलोड",
     "upload-main": "फ़ाइल चुनें या यहाँ खींचें",
     "upload-sub": "इमेज, PDF, .L5X, .xgm, .txt आदि समर्थित हैं।",
     "label-plc": "PLC निर्माता / मॉडल",
@@ -273,13 +304,18 @@ const translations = {
     "label-text": "टेक्स्ट कोड (IL, ST आदि) या अतिरिक्त जानकारी",
     "btn-analyze": "अब Google AI के साथ विश्लेषण करें",
     "preview-title": "प्रॉम्प्ट पूर्वावलोकन",
+    "contact-title": "साझेदारी और सहयोग",
+    "contact-subtitle": "यदि आप PLC विश्लेषण समाधान या तकनीकी साझेदारी में रुचि रखते हैं, तो कृपया एक संदेश छोड़ें।",
+    "form-name": "नाम / कंपनी",
+    "form-email": "ईमेल पता",
+    "form-message": "पूछताछ की सामग्री",
+    "btn-submit": "पूछताछ भेजें",
     "footer-copy": "© 2026 Ladder Analyst.",
     "footer-privacy": "गोपनीयता",
     "footer-contact": "संपर्क",
-    // Prompt translations
     "prompt-goal-header": "### विश्लेषण का लक्ष्य:",
-    "prompt-source-header": "### डेटा स्रोत की जानकारी:",
-    "prompt-visual-req": "[दृश्य विश्लेषण अनुरोध]\nसंलग्न फ़ाइल दृश्य सामग्री (इमेज/PDF) है। कृपया आरेख में संपर्क, कॉइल और कनेक्शन को सटीक रूप से डिकोड करें।",
+    "prompt-source-header": "### 데이터 स्रोत की जानकारी:",
+    "prompt-visual-req": "[दृश्य विश्लेषण अनुरोध]\nसंलग्न फ़ाइल दृश्य सामग्री (इमेज/PDF) है। कृपया आरेख में संपर्क, कॉइल और कनेक्शन को सटीक रूप से डिको드 करें।",
     "prompt-code-req": "[कोड डेटा विश्लेषण अनुरोध]",
     "prompt-diff-header": "### महत्वपूर्ण: PLC लैडर लॉजिक और सामान्य प्रोग्रामिंग (C, Python) के बीच अंतर को समझना",
     "prompt-diff-1": "1. चक्रीय (स्कैन) संरचना: C/Python क्रमिक रूप से निष्पादित होता है और समाप्त हो जाता है, लेकिन PLC मिलीसेकंड इकाइयों में इनपुट-निष्पादित-आउटपुट प्रक्रिया को असीमित रूप से दोहराता है। उस समानांतर विशेषता पर विचार करें जहां एक स्कैन के भीतर सभी स्थितियों का एक साथ मूल्यांकन किया जाता है।",
@@ -304,8 +340,19 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (translations[lang][key]) el.innerText = translations[lang][key];
   });
+  
+  const t = translations[lang];
   document.getElementById('plc-type').placeholder = lang === 'ko' ? "예: LS Electric, Mitsubishi, Siemens, Rockwell" : "e.g., LS Electric, Mitsubishi, Siemens, Rockwell";
-  document.getElementById('ladder-logic').placeholder = translations[lang]['label-text'];
+  document.getElementById('ladder-logic').placeholder = t['label-text'];
+  
+  const nameInput = document.querySelector('input[name="name"]');
+  const emailInput = document.querySelector('input[name="email"]');
+  const messageTextarea = document.querySelector('textarea[name="message"]');
+  
+  if (nameInput) nameInput.placeholder = t['form-name'];
+  if (emailInput) emailInput.placeholder = "email@example.com";
+  if (messageTextarea) messageTextarea.placeholder = t['form-message'];
+
   if (typeof updatePreview === 'function') updatePreview();
   document.getElementById('lang-menu').classList.add('hidden');
 }
