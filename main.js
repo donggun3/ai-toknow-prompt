@@ -35,7 +35,7 @@ const translations = {
     // Prompt translations
     "prompt-goal-header": "### 분석 목적:",
     "prompt-source-header": "### 데이터 소스 안내:",
-    "prompt-visual-req": "[시각적 분석 요청]\n첨부된 파일은 시각적 자료(이미지/PDF)입니다. 다이어그램의 접점, 코일, 선로 연결 상태를 정밀하게 판독하여 분석하세요.",
+    "prompt-visual-req": "[시각적 분석 요청]\n첨부된 파일 '${fileName}'은 시각적 자료(이미지/PDF)입니다. 다이어그램의 접점, 코일, 선로 연결 상태를 정밀하게 판독하여 분석하세요.",
     "prompt-code-req": "[코드 데이터 분석 요청]",
     "prompt-diff-header": "### 중요: PLC 래더 로직과 일반 프로그래밍(C, Python)의 차이 이해",
     "prompt-diff-1": "1. 순환(Scan) 구조: C/Python은 순차적 실행 후 종료되지만, PLC는 입력-실행-출력 과정을 ms 단위로 무한 반복합니다. 한 스캔 내에서 모든 조건이 동시에 평가되는 병렬적 특성을 고려하세요.",
@@ -84,7 +84,7 @@ const translations = {
     "footer-contact": "Contact Us",
     "prompt-goal-header": "### Analysis Goal:",
     "prompt-source-header": "### Data Source Information:",
-    "prompt-visual-req": "[Visual Analysis Request]\nThe attached file is visual material (Image/PDF). Please precisely decode the contacts, coils, and connections in the diagram.",
+    "prompt-visual-req": "[Visual Analysis Request]\nThe attached file '${fileName}' is visual material (Image/PDF). Please precisely decode the contacts, coils, and connections in the diagram.",
     "prompt-code-req": "[Code Data Analysis Request]",
     "prompt-diff-header": "### Important: Understanding the difference between PLC Ladder Logic and General Programming (C, Python)",
     "prompt-diff-1": "1. Cyclic (Scan) Structure: C/Python executes sequentially and ends, but PLC repeats the input-execute-output process infinitely in ms units. Consider the parallel characteristic where all conditions are evaluated simultaneously within one scan.",
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isVisualFile = ['jpg', 'jpeg', 'png', 'pdf'].includes(fileExt);
 
     if (isBinary || isVisualFile) {
-      dataDescription = t['prompt-visual-req'].replace('${fileName || currentFile?.name}', fileName || currentFile?.name || 'file');
+      dataDescription = t['prompt-visual-req'].replace('${fileName}', fileName || currentFile?.name || 'file');
     } else {
       dataDescription = `${t['prompt-code-req']}\n"""\n${additionalLogic || '...'}\n"""`;
     }
@@ -420,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ${goalText}
 
 ${t['prompt-source-header']}
+PLC Type: ${plcType}
 ${dataDescription}
 
 ${additionalLogic && (isBinary || isVisualFile) ? `### Additional User Notes:\n"${additionalLogic}"\n` : ''}
@@ -457,6 +458,9 @@ ${t['prompt-lang-req']}`;
     if (isImage || isPdf) {
       uploadPreview.innerHTML = `<div class="text-center"><i class="fas ${isImage ? 'fa-image' : 'fa-file-pdf'} text-4xl mb-3 ${isImage ? 'text-blue-500' : 'text-red-500'}"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
       uploadPreview.classList.remove('hidden');
+      document.getElementById('remove-file')?.addEventListener('click', (e) => {
+        e.stopPropagation(); currentFile = null; fileInput.value = ''; uploadPreview.classList.add('hidden'); ladderLogicTextarea.value = ''; updatePreview();
+      });
       updatePreview(file.name, true);
     } else if (isTextBased) {
       const reader = new FileReader();
@@ -464,15 +468,13 @@ ${t['prompt-lang-req']}`;
         ladderLogicTextarea.value = e.target.result;
         uploadPreview.innerHTML = `<div class="text-center"><i class="fas fa-file-code text-4xl mb-3 text-emerald-500"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
         uploadPreview.classList.remove('hidden');
+        document.getElementById('remove-file')?.addEventListener('click', (ev) => {
+            ev.stopPropagation(); currentFile = null; fileInput.value = ''; uploadPreview.classList.add('hidden'); ladderLogicTextarea.value = ''; updatePreview();
+        });
         updatePreview(file.name, false);
       };
       reader.readAsText(file);
     }
-    setTimeout(() => {
-      document.getElementById('remove-file')?.addEventListener('click', (e) => {
-        e.stopPropagation(); currentFile = null; fileInput.value = ''; uploadPreview.classList.add('hidden'); ladderLogicTextarea.value = ''; updatePreview();
-      });
-    }, 100);
   };
 
   [plcTypeInput, analysisGoalSelect, ladderLogicTextarea].forEach(el => {

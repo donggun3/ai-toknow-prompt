@@ -13,7 +13,20 @@
 
 /* AD Placeholder Styling */
 .ad-placeholder {
-  @apply flex items-center justify-center bg-slate-100 dark:bg-slate-900 border border-dashed border-slate-300 dark:border-slate-700 rounded-xl font-mono text-slate-400 dark:text-slate-600 select-none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9; /* slate-100 */
+  border: 1px dashed #cbd5e1; /* slate-300 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #94a3b8; /* slate-400 */
+  user-select: none;
+}
+.dark .ad-placeholder {
+  background-color: #0f172a; /* slate-900 */
+  border-color: #334155; /* slate-700 */
+  color: #475569; /* slate-600 */
 }
 
 /* Scrollbar */
