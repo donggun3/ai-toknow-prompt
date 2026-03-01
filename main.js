@@ -13,6 +13,7 @@ const translations = {
     "form-title": "이미지 / PDF / 데이터 업로드",
     "upload-main": "파일을 선택하거나 드래그하세요",
     "upload-sub": "이미지, PDF, .L5X, .xgm, .txt 등 지원",
+    "upload-privacy": "첨부하는 자료나 파일 정보는 수집하지 않습니다",
     "label-plc": "PLC 제조사 / 기종",
     "label-goal": "분석 목적",
     "opt-general": "전체적인 로직 설명 및 흐름 파악",
@@ -63,6 +64,7 @@ const translations = {
     "form-title": "Image / PDF / Data Upload",
     "upload-main": "Select or drag files here",
     "upload-sub": "Supports Images, PDF, .L5X, .xgm, .txt, etc.",
+    "upload-privacy": "We do not collect any attached data or file information",
     "label-plc": "PLC Manufacturer / Model",
     "label-goal": "Analysis Goal",
     "opt-general": "General logic explanation & sequence",
@@ -112,6 +114,7 @@ const translations = {
     "form-title": "Tải lên Hình ảnh / PDF / Dữ liệu",
     "upload-main": "Chọn hoặc kéo tệp vào đây",
     "upload-sub": "Hỗ trợ Hình ảnh, PDF, .L5X, .xgm, .txt, v.v.",
+    "upload-privacy": "Chúng tôi không thu thập bất kỳ dữ liệu hoặc thông tin tệp đính kèm nào",
     "label-plc": "Hãng sản xuất / Model PLC",
     "label-goal": "Mục đích phân tích",
     "opt-general": "Giải thích logic & trình tự tổng thể",
@@ -161,6 +164,7 @@ const translations = {
     "form-title": "Subir Imagen / PDF / Datos",
     "upload-main": "Seleccione o arrastre archivos",
     "upload-sub": "Soporta Imagen, PDF, .L5X, .xgm, .txt, etc.",
+    "upload-privacy": "No recopilamos ninguna información de archivos o datos adjuntos",
     "label-plc": "Fabricante / Modelo PLC",
     "label-goal": "Objetivo del Análisis",
     "opt-general": "Explicación lógica general",
@@ -210,6 +214,7 @@ const translations = {
     "form-title": "Bild / PDF / Daten Hochladen",
     "upload-main": "Datei auswählen oder herziehen",
     "upload-sub": "Unterstützt Bilder, PDF, .L5X, .xgm, .txt usw.",
+    "upload-privacy": "Wir sammeln keine angehängten Daten oder Dateiinformationen",
     "label-plc": "SPS-Hersteller / Modell",
     "label-goal": "Analyseziel",
     "opt-general": "Allgemeine Logik-Erklärung",
@@ -237,7 +242,7 @@ const translations = {
     "prompt-diff-1": "1. Zyklische (Scan) Struktur: C/Python wird sequenziell ausgeführt und endet, aber die SPS wiederholt den Eingabe-Ausführung-Ausgabe-Prozess unendlich in ms-Einheiten. Berücksichtigen Sie die parallele Charakteristik, bei der alle Bedingungen gleichzeitig innerhalb eines Scans ausgewertet werden.",
     "prompt-diff-2": "2. Selbsthaltung (Self-Holding): Es geht nicht nur darum, Variablen Werte zuzuweisen; Sie müssen die Logik aus der Perspektive der 'elektrischen Selbsthaltung' interpretieren, die den physischen Verbindungsstatus von Kontakten aufrechterhält.",
     "prompt-diff-3": "3. Steigende Flanke (P): Im Gegensatz zu einer allgemeinen 'if'-Anweisung lesen Sie genau die Besonderheit, dass sie nur für genau einen Scan in dem 'Moment' arbeitet, in dem das Signal von OFF auf ON wechselt.",
-    "prompt-diff-4": "4. Physische E/A: Alle Variablen sind physische Adressen, die mit tatsächlichen Maschinengeräten verbunden sind. Analysieren Sie aus der Perspektive von mechanischen Kollisionen oder Sicherheitsverriegelungen statt aus Software-Fehlern.",
+    "prompt-diff-4": "4. Physische E/A: Alle Variablen sind physisaddresses verbunden sind. Analysieren Sie aus der Perspektive von mechanischen Kollisionen oder Sicherheitsverriegelungen statt aus Software-Fehlern.",
     "prompt-guide-header": "### Gemini Analyse-Richtlinien:",
     "prompt-guide-1": "- Visuelle/Textuelle Dekodierung: Interpretieren Sie Kontakte, Spulen und Funktionsblöcke im Diagramm oder IL/ST-Code präzise.",
     "prompt-guide-2": "- Überprüfung der physischen Verriegelung: Überprüfen Sie, ob eine physische Schutzlogik (Interlock) wie 'B darf niemals eingeschaltet werden, wenn A in Betrieb ist' entworfen wurde.",
@@ -259,6 +264,7 @@ const translations = {
     "form-title": "Télécharger Image / PDF / Données",
     "upload-main": "Choisir hoặc glisser un fichier",
     "upload-sub": "Supporte Image, PDF, .L5X, .xgm, .txt, etc.",
+    "upload-privacy": "Nous ne collectons aucune donnée ou information sur les fichiers joints",
     "label-plc": "Fabricant / Modèle PLC",
     "label-goal": "Objectif de l'Analyse",
     "opt-general": "Explication logique globale",
@@ -297,7 +303,7 @@ const translations = {
   hi: {
     badge: "मल्टी-모डल PLC विश्लेषण",
     "hero-title": "AI द्वारा संचालित लैडर आरेख और PLC विश्लेषण प्रॉम्प्ट + टिप्स",
-    "hero-subtitle": "Gemini की विज़ुअल लॉजिक व्याख्या का लाभ उठाने के लिए स्क्रीन कैप्चर या PDF अपलोड करें।",
+    "hero-subtitle": "Gemini की विज़ुअल लॉजिक व्याख्या का लाभ उठाने के लिए screen capture या PDF अपलोड करें।",
     "guide-title": "प्रभावी विश्लेषण के लिए मार्गदर्शिका",
     "tip1-title": "इमेज और PDF प्रारूप (सबसे प्रभावी)",
     "tip1-desc": "TIA पोर्टल, GX Works या PDF प्रिंट अपलोड करें ताकि Gemini विज़ुअल विश्लेषण कर सके।",
@@ -308,6 +314,7 @@ const translations = {
     "form-title": "इमेज / PDF / 데이터 अपलोड",
     "upload-main": "फ़ाइल चुनें या यहाँ खींचें",
     "upload-sub": "इमेज, PDF, .L5X, .xgm, .txt आदि समर्थित हैं।",
+    "upload-privacy": "हम किसी भी संलग्न डेटा या फ़ाइल जानकारी को एकत्र नहीं करते हैं",
     "label-plc": "PLC निर्माता / मॉडल",
     "label-goal": "विश्लेषण का लक्ष्य",
     "opt-general": "सामान्य लॉजिक व्याख्या",
@@ -349,26 +356,38 @@ let currentLang = 'ko';
 
 function setLanguage(lang) {
   currentLang = lang;
-  document.getElementById('current-lang').innerText = lang.toUpperCase();
+  const langDisplay = document.getElementById('current-lang');
+  if (langDisplay) langDisplay.innerText = lang.toUpperCase();
+  
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) el.innerText = translations[lang][key];
+    if (translations[lang] && translations[lang][key]) {
+      el.innerText = translations[lang][key];
+    }
   });
   
   const t = translations[lang];
-  document.getElementById('plc-type').placeholder = lang === 'ko' ? "예: LS Electric, Mitsubishi, Siemens, Rockwell" : "e.g., LS Electric, Mitsubishi, Siemens, Rockwell";
-  document.getElementById('ladder-logic').placeholder = t['label-text'];
+  const plcTypeInput = document.getElementById('plc-type');
+  if (plcTypeInput) {
+    plcTypeInput.placeholder = lang === 'ko' ? "예: LS Electric, Mitsubishi, Siemens, Rockwell" : "e.g., LS Electric, Mitsubishi, Siemens, Rockwell";
+  }
+  
+  const ladderLogicTextarea = document.getElementById('ladder-logic');
+  if (ladderLogicTextarea) {
+    ladderLogicTextarea.placeholder = t['label-text'] || "";
+  }
   
   const nameInput = document.querySelector('input[name="name"]');
   const emailInput = document.querySelector('input[name="email"]');
   const messageTextarea = document.querySelector('textarea[name="message"]');
   
-  if (nameInput) nameInput.placeholder = t['form-name'];
+  if (nameInput) nameInput.placeholder = t['form-name'] || "";
   if (emailInput) emailInput.placeholder = "email@example.com";
-  if (messageTextarea) messageTextarea.placeholder = t['form-message'];
+  if (messageTextarea) messageTextarea.placeholder = t['form-message'] || "";
 
   if (typeof updatePreview === 'function') updatePreview();
-  document.getElementById('lang-menu').classList.add('hidden');
+  const langMenu = document.getElementById('lang-menu');
+  if (langMenu) langMenu.classList.add('hidden');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -387,18 +406,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentFile = null;
 
-  langBtn.addEventListener('mouseenter', () => { langMenu.classList.remove('hidden'); });
-  document.addEventListener('click', () => { langMenu.classList.add('hidden'); });
+  if (langBtn && langMenu) {
+    langBtn.addEventListener('mouseenter', () => { langMenu.classList.remove('hidden'); });
+    document.addEventListener('click', (e) => { 
+      if (!langBtn.contains(e.target)) langMenu.classList.add('hidden'); 
+    });
+  }
 
   const savedTheme = localStorage.getItem('theme') || 'light';
   html.className = savedTheme;
-  themeToggle.addEventListener('click', () => {
-    const newTheme = html.className === 'light' ? 'dark' : 'light';
-    html.className = newTheme;
-    localStorage.setItem('theme', newTheme);
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const newTheme = html.className === 'light' ? 'dark' : 'light';
+      html.className = newTheme;
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 
   window.updatePreview = (fileName = '', isBinary = false) => {
+    if (!plcTypeInput || !analysisGoalSelect || !ladderLogicTextarea || !promptPreview) return;
+    
     const plcType = plcTypeInput.value || '[PLC Model]';
     const goalValue = analysisGoalSelect.value;
     const additionalLogic = ladderLogicTextarea.value;
@@ -411,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isVisualFile = ['jpg', 'jpeg', 'png', 'pdf'].includes(fileExt);
 
     if (isBinary || isVisualFile) {
-      dataDescription = t['prompt-visual-req'].replace('${fileName}', fileName || currentFile?.name || 'file');
+      dataDescription = (t['prompt-visual-req'] || "").replace('${fileName}', fileName || currentFile?.name || 'file');
     } else {
       dataDescription = `${t['prompt-code-req']}\n"""\n${additionalLogic || '...'}\n"""`;
     }
@@ -451,26 +478,30 @@ ${t['prompt-lang-req']}`;
     const isPdf = ext === 'pdf';
     const isTextBased = ['txt', 'csv', 'awl', 'st', 'l5x', 'xgm', 'xml'].includes(ext);
 
-    if (ext === 'xgm') plcTypeInput.value = 'LS Electric XG5000';
-    if (ext.startsWith('gxw')) plcTypeInput.value = 'Mitsubishi GX Works';
-    if (ext === 'l5x') plcTypeInput.value = 'Rockwell Studio 5000';
+    if (ext === 'xgm' && plcTypeInput) plcTypeInput.value = 'LS Electric XG5000';
+    if (ext.startsWith('gxw') && plcTypeInput) plcTypeInput.value = 'Mitsubishi GX Works';
+    if (ext === 'l5x' && plcTypeInput) plcTypeInput.value = 'Rockwell Studio 5000';
 
     if (isImage || isPdf) {
-      uploadPreview.innerHTML = `<div class="text-center"><i class="fas ${isImage ? 'fa-image' : 'fa-file-pdf'} text-4xl mb-3 ${isImage ? 'text-blue-500' : 'text-red-500'}"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
-      uploadPreview.classList.remove('hidden');
-      document.getElementById('remove-file')?.addEventListener('click', (e) => {
-        e.stopPropagation(); currentFile = null; fileInput.value = ''; uploadPreview.classList.add('hidden'); ladderLogicTextarea.value = ''; updatePreview();
-      });
+      if (uploadPreview) {
+        uploadPreview.innerHTML = `<div class="text-center"><i class="fas ${isImage ? 'fa-image' : 'fa-file-pdf'} text-4xl mb-3 ${isImage ? 'text-blue-500' : 'text-red-500'}"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
+        uploadPreview.classList.remove('hidden');
+        document.getElementById('remove-file')?.addEventListener('click', (e) => {
+          e.stopPropagation(); currentFile = null; if(fileInput) fileInput.value = ''; uploadPreview.classList.add('hidden'); if(ladderLogicTextarea) ladderLogicTextarea.value = ''; updatePreview();
+        });
+      }
       updatePreview(file.name, true);
     } else if (isTextBased) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        ladderLogicTextarea.value = e.target.result;
-        uploadPreview.innerHTML = `<div class="text-center"><i class="fas fa-file-code text-4xl mb-3 text-emerald-500"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
-        uploadPreview.classList.remove('hidden');
-        document.getElementById('remove-file')?.addEventListener('click', (ev) => {
-            ev.stopPropagation(); currentFile = null; fileInput.value = ''; uploadPreview.classList.add('hidden'); ladderLogicTextarea.value = ''; updatePreview();
-        });
+        if (ladderLogicTextarea) ladderLogicTextarea.value = e.target.result;
+        if (uploadPreview) {
+          uploadPreview.innerHTML = `<div class="text-center"><i class="fas fa-file-code text-4xl mb-3 text-emerald-500"></i><p class="font-bold">${file.name}</p><button id="remove-file" class="mt-4 text-xs text-red-500 underline">Remove</button></div>`;
+          uploadPreview.classList.remove('hidden');
+          document.getElementById('remove-file')?.addEventListener('click', (ev) => {
+              ev.stopPropagation(); currentFile = null; if(fileInput) fileInput.value = ''; uploadPreview.classList.add('hidden'); if(ladderLogicTextarea) ladderLogicTextarea.value = ''; updatePreview();
+          });
+        }
         updatePreview(file.name, false);
       };
       reader.readAsText(file);
@@ -478,18 +509,22 @@ ${t['prompt-lang-req']}`;
   };
 
   [plcTypeInput, analysisGoalSelect, ladderLogicTextarea].forEach(el => {
-    el.addEventListener('input', () => updatePreview());
+    if (el) el.addEventListener('input', () => updatePreview());
   });
 
-  dropZone.addEventListener('click', () => fileInput.click());
-  fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
-  dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'); });
-  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'));
-  dropZone.addEventListener('drop', (e) => { e.preventDefault(); dropZone.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'); handleFiles(e.dataTransfer.files); });
+  if (dropZone && fileInput) {
+    dropZone.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', (e) => handleFiles(e.target.files));
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'));
+    dropZone.addEventListener('drop', (e) => { e.preventDefault(); dropZone.classList.remove('border-blue-500', 'bg-blue-50', 'dark:bg-blue-900/20'); handleFiles(e.dataTransfer.files); });
+  }
 
-  aiSearchBtn.addEventListener('click', () => {
-    window.open(`https://www.google.com/search?q=${encodeURIComponent(promptPreview.textContent)}`, '_blank');
-  });
+  if (aiSearchBtn) {
+    aiSearchBtn.addEventListener('click', () => {
+      window.open(`https://www.google.com/search?q=${encodeURIComponent(promptPreview.textContent)}`, '_blank');
+    });
+  }
 
   setLanguage('ko');
 });
