@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Ladder Logic Analyst</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              bg: '#0f172a',
+              card: '#1e293b',
+              border: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans leading-relaxed transition-colors duration-300">
+  
+  <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 py-3">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-blue-600 dark:text-blue-400">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Home</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-3xl font-bold mb-8">개인정보처리방침 (Privacy Policy)</h1>
+    
+    <div class="space-y-8 text-slate-600 dark:text-slate-400">
+      <section>
+        <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3">1. 개인정보의 수집 및 이용 목적</h2>
+        <p>
+          'Ladder Logic Analyst'(이하 '본 사이트')는 별도의 회원가입 절차 없이 누구나 이용할 수 있으며, 사용자의 이름, 이메일, 전화번호 등 직접적인 개인정보를 수집하거나 서버에 저장하지 않습니다.
+          <br><br>
+          사용자가 업로드하는 파일(이미지, PDF, 텍스트 등)은 사용자의 로컬 브라우저 내에서만 처리되어 프롬프트 생성에 활용되며, 본 사이트의 서버로 전송되거나 저장되지 않습니다.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3">2. 쿠키(Cookie) 및 광고 게재</h2>
+        <p>
+          본 사이트는 서비스 제공 및 사용자 경험 개선을 위해 쿠키를 사용할 수 있습니다. 또한 Google AdSense를 통해 광고를 게재하고 있습니다.
+        </p>
+        <ul class="list-disc pl-5 mt-2 space-y-1">
+          <li><strong>Google AdSense:</strong> Google 및 타사 공급업체는 쿠키를 사용하여 사용자의 본 사이트 및 다른 웹사이트 방문 기록을 기반으로 광고를 게재할 수 있습니다.</li>
+          <li>사용자는 <a href="https://www.google.com/settings/ads" target="_blank" class="text-blue-500 underline">Google 광고 설정</a>에서 맞춤 광고 설정을 해제할 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3">3. 로그 데이터</h2>
+        <p>
+          서비스 품질 향상 및 보안을 위해 방문 일시, IP 주소, 브라우저 유형 등의 일반적인 접속 로그가 Google Analytics 또는 웹 호스팅 서버에 의해 자동으로 수집될 수 있습니다. 이 데이터는 개인을 식별하는 용도로 사용되지 않습니다.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3">4. 문의하기</h2>
+        <p>
+          본 개인정보처리방침에 대해 궁금한 점이 있으시면, 사이트 하단의 문의 기능을 통해 연락해 주시기 바랍니다.
+        </p>
+      </section>
+      
+      <section class="pt-8 border-t border-slate-200 dark:border-slate-800 text-sm">
+        <p>Last Updated: March 1, 2026</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Simple theme check to match parent
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</body>
+</html>
