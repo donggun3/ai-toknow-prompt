@@ -1,11 +1,11 @@
 const translations = {
   ko: {
     badge: "멀티모달 PLC 분석",
-    "hero-title": "AI로 래더 다이어그램 및 PLC 프로그램 분석해 주는 프롬프트 + 주의사항",
-    "hero-subtitle": "화면 캡처나 PDF 문서를 업로드하여 Gemini의 시각적 로직 해석 기능을 활용해 보세요.",
+    "hero-title": "AI로 어려운 PLC 프로그램 및 타인이 작업한 프로그램 분석 툴",
+    "hero-subtitle": "프로그램 로직 화면 캡처나 PDF 문서를 업로드하여 해석 기능을 활용해 보세요.",
     "guide-title": "효과적인 분석을 위한 가이드",
     "tip1-title": "이미지 및 PDF 형태 (가장 효과적)",
-    "tip1-desc": "HMI 화면 캡처나 GX Works, RSLogix, TIA Portal 등에서 캡처한 이미지, 또는 로직을 PDF로 인쇄한 문서를 업로드하면 Gemini가 시각적으로 해석합니다.",
+    "tip1-desc": "HMI 화면 캡처나 GX Works, RSLogix, TIA Portal 등에서 캡처한 이미지, 또는 로직을 PDF로 인쇄한 문서를 업로드하면 AI가 시각적으로 해석합니다.",
     "tip2-title": "텍스트 기반 코드 분석",
     "tip2-desc": "Instruction List (IL), Structured Text (ST) 형태는 더욱 정확한 분석이 가능합니다. Rockwell의 .L5X 파일은 직접 분석이 가능합니다.",
     "warning-title": "특정 형식 및 바이너리 파일 주의사항",
@@ -20,7 +20,7 @@ const translations = {
     "opt-debug": "오류/버그 원인 파악 및 수정 제안",
     "opt-optimize": "로직 최적화 및 효율성 개선",
     "label-text": "텍스트 로직 (IL, ST 등) 또는 추가 정보",
-    "btn-analyze": "Google AI로 즉시 분석하기",
+    "btn-analyze": "프롬프트 복사 및 Gemini로 이동",
     "preview-title": "전송될 프롬프트 미리보기",
     "contact-title": "제휴 및 분석 도구 협력 문의",
     "contact-subtitle": "PLC 분석 솔루션 도입이나 기술 제휴에 관심이 있으시다면 메시지를 남겨주세요.",
@@ -544,7 +544,24 @@ ${t['prompt-lang-req']}`;
 
   if (aiSearchBtn) {
     aiSearchBtn.addEventListener('click', () => {
-      window.open(`https://www.google.com/search?q=${encodeURIComponent(promptPreview.textContent)}`, '_blank');
+      const promptText = promptPreview.textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const originalText = aiSearchBtn.innerText;
+        const successMsg = currentLang === 'ko' ? "복사 완료! Gemini로 이동 중..." : "Copied! Redirecting to Gemini...";
+        
+        aiSearchBtn.innerText = successMsg;
+        const originalBg = aiSearchBtn.className;
+        aiSearchBtn.classList.add('bg-green-600', 'scale-105');
+        
+        setTimeout(() => {
+          window.open('https://gemini.google.com/app', '_blank');
+          aiSearchBtn.innerText = originalText;
+          aiSearchBtn.classList.remove('bg-green-600', 'scale-105');
+        }, 1200);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        window.open('https://gemini.google.com/app', '_blank');
+      });
     });
   }
 
